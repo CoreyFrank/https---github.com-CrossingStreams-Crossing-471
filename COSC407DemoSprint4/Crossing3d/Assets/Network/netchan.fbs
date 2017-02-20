@@ -1,0 +1,22 @@
+namespace sample;
+
+struct Vec3 {
+	x:float;
+	y:float;
+	z:float;
+}
+
+table Netchan {
+	protocol:int;
+	sequence:int;
+	ack:int;
+	players:[Player]; // Vector of tables
+}
+
+table Player {
+	id:int;
+	pos:Vec3; //struct
+	rot:Vec3; //struct
+}
+
+root_type Netchan;
